@@ -1,0 +1,5 @@
+.dockerignore
+.git
+assets
+bin
+node_modules

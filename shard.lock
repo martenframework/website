@@ -1,0 +1,18 @@
+version: 2.0
+shards:
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.10.1
+
+  i18n:
+    git: https://github.com/crystal-i18n/i18n.git
+    version: 0.2.1
+
+  marten:
+    git: https://github.com/martenframework/marten.git
+    version: 0.1.0.dev0+git.commit.c1cb964f10c5e80194f2ea3056fbc2bf1f495081
+
+  sqlite3:
+    git: https://github.com/crystal-lang/crystal-sqlite3.git
+    version: 0.18.0
+

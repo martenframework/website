@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.9.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^6.5.1",
+    "gulp": "^4.0.0",
+    "gulp-env": "^0.4.0",
+    "gulp-util": "^3.0.8",
+    "jsdom": "^18.1.1",
+    "lodash.template": ">=4.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "nan": "^2.11.0",
+    "node-sass": "^6.0.0",
+    "path": "^0.12.7",
+    "raw-loader": "^4.0.2",
+    "sass-loader": "^12.0.0",
+    "script-loader": "^0.7.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.44.0",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-manifest-plugin": "^4.0.2"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  }
+}

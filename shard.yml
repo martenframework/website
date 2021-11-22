@@ -1,0 +1,11 @@
+name: website
+version: 0.1.0
+
+crystal: 1.2.2
+
+dependencies:
+  marten:
+    github: martenframework/marten
+    branch: main
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
