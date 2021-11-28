@@ -34,7 +34,7 @@ const jsDir = `${assetsDir}js`;
 const webpackConfig = {
   mode: PROD_ENV ? 'production' : 'development',
   entry: {
-    App: [`${sassDir}/App.scss`],
+    App: [`${jsDir}/App.js`, `${sassDir}/App.scss`],
   },
   output: {
     filename: PROD_ENV ? '[name].[chunkhash].js' : '[name].js',
@@ -77,8 +77,8 @@ const webpackConfig = {
         ],
       },
       { test: /\.txt$/, use: 'raw-loader' },
-      { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)([\?]?.*)$/, use: 'url-loader?limit=10000' },
-      { test: /\.(eot|ttf|wav|mp3|otf)([\?]?.*)$/, use: 'file-loader' },
+      { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)([\?]?.*)$/, use: 'asset/resource' },
+      { test: /\.(eot|ttf|wav|mp3|otf)([\?]?.*)$/, type: 'asset/resource' },
     ],
   },
   optimization: {
@@ -145,6 +145,7 @@ gulp.task('webpack-dev-server', gulp.series(() => {
   devWebpackConfig.devServer = { hot: true };
   devWebpackConfig.entry = {
     App: [
+      `${jsDir}/App.js`,
       `${sassDir}/App.scss`,
       `webpack-dev-server/client?http://localhost:${WEBPACK_DEV_SERVER_PORT}`,
       'webpack/hot/only-dev-server',
@@ -175,12 +176,12 @@ gulp.task('webpack-dev-server', gulp.series(() => {
       },
       { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.txt$/, use: 'raw-loader' },
-      { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)([\?]?.*)$/, use: 'url-loader?limit=10000' },
-      { test: /\.(eot|ttf|wav|mp3|otf)([\?]?.*)$/, use: 'file-loader' },
+      { test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)([\?]?.*)$/, use: 'asset/inline' },
+      { test: /\.(eot|ttf|wav|mp3|otf)([\?]?.*)$/, type: 'asset/resource' },
     ],
   };
   devWebpackConfig.output = {
-    path: path.resolve(rootDir, assetsDir),
+    path: assetsDir,
     publicPath: `http://localhost:${WEBPACK_DEV_SERVER_PORT}/assets/`,
     filename: '[name].js',
   };
@@ -192,7 +193,7 @@ gulp.task('webpack-dev-server', gulp.series(() => {
   // Start a webpack-dev-server
   new WebpackDevServer(webpack(devWebpackConfig), {
     static: {
-      directory: path.resolve(rootDir, assetsDir, '..'),
+      directory: assetsDir,
       publicPath: '/assets/',
     },
     headers: { 'Access-Control-Allow-Origin': '*' },

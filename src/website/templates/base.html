@@ -3,10 +3,78 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <title>{% block title %}Marten{% endblock %}</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>{% block title %}{% block page_title %}{% endblock page_title %} &ndash; Marten{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% asset 'App.css' %}" />
   </head>
-  <body>
+  <body
+      id="{% block body_id %}id_body{% endblock body_id %}"
+      class="{% block body_class %}{% endblock %}"
+      data-controller="{% block data_controller %}{% endblock data_controller %}"
+      data-action="{% block data_action %}{% endblock data_action %}"
+      >
+    <div id="body-wrap">
+      {% block header %}
+      <div id="navbar-wrap">
+        <div class="container">
+          <nav class="navbar" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="{% asset 'img/logo_white.svg' %}" alt="Marten logo" height="120" />&nbsp;Marten
+              </a>
+              <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="navbar-menu">
+              <div class="navbar-start">
+              </div>
+
+              <div class="navbar-end">
+                <a href="https://docs.martenframework.com" class="navbar-item" target="_blank">
+                  Documentation
+                </a>
+                <a href="https://github.com/martenframework/marten" class="navbar-item" target="_blank">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      {% endblock header %}
+
+      {% block content %}
+      {% endblock content %}
+
+      {% block footer %}
+      <footer id="footer" class="footer">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-three-fifths recap p-2">
+              <p class="logo-and-name"><img src="{% asset 'img/logo_primary.svg' %}" alt="Marten logo" height="120" />&nbsp;Marten</p>
+              <p class="description">Marten is a Crystal Web framework that enables pragmatic development and rapid prototyping. It provides a consistent and extensible set of tools that developers can leverage to build web applications without reinventing the wheel.</p>
+            </div>
+            <div class="column p-2 additional-links">
+              <p class="mb-2 has-text-weight-bold">Learn more</p>
+              <p class="link-wrap"><a href="">Getting started with Marten</a></p>
+              <p class="link-wrap"><a href="https://github.com/martenframework/marten" target="_blank">GitHub</a></p>
+              <p class="link-wrap"><a href="https://github.com/martenframework/marten/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="columns">
+            <div class="column pl-2 pb-0">
+              <p class="copyright">&copy; Marten framework 2021</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      {% endblock footer %}
+    </div>
     <script src="{% asset 'App.js' %}"></script>
   </body>
 </html>

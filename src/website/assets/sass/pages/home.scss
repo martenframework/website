@@ -1,0 +1,49 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45vh;
+  background: linear-gradient(180deg, #904e95 0, $primary);
+
+  h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $white;
+  }
+
+  p.subtitle {
+    margin-top: -0.5rem !important;
+    text-align: center;
+    font-weight: 300;
+    color: $white;
+
+    @media (min-width: 768px) {
+      max-width: 40%;
+    }
+  }
+
+  a.button {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+.slant {
+  position: relative;
+  display: block;
+  padding-bottom: 30px;
+  background-color: $white;
+
+  @media (min-width: 768px) {
+    padding-top: 0 !important;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 200px;
+      margin-bottom: 50px;
+      background: linear-gradient(to right bottom, $primary 49.9%, transparent 50.1%);
+    }
+  }
+}

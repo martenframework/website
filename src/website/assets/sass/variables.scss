@@ -1,0 +1,152 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Bulma variables
+//
+
+$grey-darker: #363636;
+$grey-dark: #4a4a4a;
+$grey: #7a7a7a;
+$grey-light: #b5b5b5;
+$grey-lighter: #dbdbdb;
+
+$orange: #f57a00;
+$yellow: #f5e625;
+$green: #22b24c;
+$turquoise: #00aba9;
+$blue: #369;
+$purple: #aa40ff;
+$red: #ff2e12;
+
+$primary: #eb6864;
+$danger: $orange;
+
+$family-sans-serif: Inter, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+$radius: 4px;
+
+$navbar-item-hover-color: $primary;
+$navbar-item-active-color: $primary;
+$navbar-dropdown-item-hover-color: $primary;
+$navbar-dropdown-item-active-color: $primary;
+
+$bulmaswatch-import-font: true !default;
+
+$control-height: 2.5em;
+
+
+//== Typography
+//
+
+/* Inter - Thin */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/inter/inter-thin.ttf');
+}
+
+/* Inter - Extra Light */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/inter/inter-extralight.ttf');
+}
+
+/* Inter - Light */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter/inter-light.ttf');
+}
+
+/* Inter - Regular */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter/inter-regular.ttf');
+}
+
+/* Inter - Medium */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter/inter-medium.ttf');
+}
+
+/* Inter - Semi Bold */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter/inter-semibold.ttf');
+}
+
+/* Inter - Bold */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter/inter-bold.ttf');
+}
+
+/* Inter - Extra Bold */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/inter/inter-extrabold.ttf');
+}
+
+/* Inter - Black */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/inter/inter-black.ttf');
+}
+
+/* Confortaa - Light */
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/comfortaa/comfortaa-light.ttf');
+}
+
+/* Confortaa - Regular */
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/comfortaa/comfortaa-regular.ttf');
+}
+
+/* Confortaa - Medium */
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/comfortaa/comfortaa-medium.ttf');
+}
+
+/* Confortaa - Semi Bold */
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/comfortaa/comfortaa-semibold.ttf');
+}
+
+/* Confortaa - Bold */
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/comfortaa/comfortaa-bold.ttf');
+}

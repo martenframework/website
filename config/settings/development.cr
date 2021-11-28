@@ -5,6 +5,7 @@ Marten.configure :development do |config|
 
   config.assets.dirs = [
     Path["src/website/assets/build_dev"].expand,
+    Path["src/website/assets"].expand,
   ]
 
   webpack_sock = Socket.tcp(Socket::Family::INET)
