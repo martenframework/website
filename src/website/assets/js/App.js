@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBarSticky = navBarSelector.offsetTop;
 
   window.addEventListener('scroll', () => {
-    if(window.scrollY > navBarSticky) {
+    if (window.scrollY > navBarSticky) {
       navBarWrapSelector.classList.add('sticky');
     } else {
       navBarWrapSelector.classList.remove('sticky');
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', () => {
     if (window.innerWidth <= largeDevicesWidth) {
-      navBarToggler.addEventListener('click', ev => toggleAction(ev));
-      document.addEventListener('click', ev => closeNavBar(ev));
+      navBarToggler.addEventListener('click', (ev) => toggleAction(ev));
+      document.addEventListener('click', (ev) => closeNavBar(ev));
     }
   });
   window.dispatchEvent(new Event('resize'));
