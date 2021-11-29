@@ -28,7 +28,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install shards
-        run: shards install
+        run: |
+          git config --global url."https://${PERSONAL_TOKEN}@github.com".insteadOf "https://github.com"
+          shards install
       - name: Run QA checks
         run: make qa_crystal
 
@@ -39,6 +41,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install shards
-        run: shards install
+        run: |
+          git config --global url."https://${PERSONAL_TOKEN}@github.com".insteadOf "https://github.com"
+          shards install
       - name: Run tests suite
         run: make tests_crystal
