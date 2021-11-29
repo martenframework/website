@@ -16,3 +16,4 @@ src/website/assets/build/*
 !src/website/assets/build/.gitkeep
 src/website/assets/build_dev/*
 !src/website/assets/build_dev/.gitkeep
+.env

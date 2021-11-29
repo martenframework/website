@@ -4,6 +4,8 @@ version: 0.1.0
 crystal: 1.2.2
 
 dependencies:
+  dotenv:
+    github: gdotdesign/cr-dotenv
   marten:
     github: martenframework/marten
     branch: main

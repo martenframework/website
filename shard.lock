@@ -4,6 +4,10 @@ shards:
     git: https://github.com/crystal-lang/crystal-db.git
     version: 0.10.1
 
+  dotenv:
+    git: https://github.com/gdotdesign/cr-dotenv.git
+    version: 1.0.0
+
   i18n:
     git: https://github.com/crystal-i18n/i18n.git
     version: 0.2.1
