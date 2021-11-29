@@ -37,24 +37,29 @@ server:
 # The following rules can be used to check code quality and perform sanity checks.
 # --------------------------------------------------------------------------------------------------
 
-.PHONY: qa
+.PHONY: qa qa_crystal qa_js
 ## Trigger all quality assurance checks.
-qa: format_checks lint
+qa: qa_crystal qa_js
+## Trigger Crystal quality assurance checks.
+qa_crystal: lint_crystal
+## Trigger Javascript quality assurance checks.
+qa_js: lint_js
 
-.PHONY: format
+.PHONY: format_crystal
 ## Perform and apply crystal formatting.
-format:
+format_crystal:
 	crystal tool format
 
-.PHONY: format_checks
-## Trigger crystal formatting checks.
-format_checks:
-	crystal tool format --check
-
-.PHONY: lint
+.PHONY: lint lint_crystal lint_js
 ## Trigger code quality checks.
-lint:
+lint: lint_crystal lint_js
+## Trigger code Crystal quality checks.
+lint_crystal:
+	crystal tool format --check
 	bin/ameba
+## Trigger Javascript code quality checks (eslint).
+lint_js:
+	npm run lint
 
 
 # TESTING
@@ -66,8 +71,13 @@ lint:
 ## Alias of "tests".
 t: tests
 ## Run all the test suites.
-tests:
+tests: tests_crystal # tests_js
+## Run the Crystal test suite.
+tests_crystal:
 	crystal spec
+## Run the Javascript test suite.
+# tests_js:
+# 	npm test
 
 
 # MAKEFILE HELPERS
