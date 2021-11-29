@@ -4,6 +4,7 @@ require "marten"
 require "sqlite3"
 
 # Project requirements.
+require "./common/**"
 require "./website/app"
 
 # Configuration requirements.
