@@ -173,6 +173,10 @@ footer {
 
       a {
         color: $grey-dark;
+
+        &:hover, &:focus {
+          color: $grey;
+        }
       }
     }
   }
@@ -181,9 +185,5 @@ footer {
     margin-top: 2rem;
     font-size: 0.8rem;
     color: $grey;
-
-    &:hover, &:focus {
-      color: $grey-darker;
-    }
   }
 }
