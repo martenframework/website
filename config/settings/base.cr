@@ -1,4 +1,4 @@
-Dotenv.load
+Dotenv.load?
 
 Marten.configure do |config|
   config.secret_key = EnvSetting.fetch(:SECRET_KEY)
