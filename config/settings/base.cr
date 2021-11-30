@@ -7,10 +7,5 @@ Marten.configure do |config|
     Website::App,
   ]
 
-  config.database do |db|
-    db.backend = :sqlite
-    db.name = Path["website.db"].expand
-  end
-
   config.assets.app_dirs = false
 end

@@ -1,7 +1,7 @@
 # Third party requirements.
 require "dotenv"
 require "marten"
-require "sqlite3"
+require "pg"
 
 # Project requirements.
 require "./common/**"
