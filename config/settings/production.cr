@@ -2,6 +2,13 @@ Marten.configure :production do |config|
   config.debug = false
   config.host = "0.0.0.0"
 
+  config.basic_auth.username = EnvSetting.fetch(:BASIC_AUTH_USERNAME)
+  config.basic_auth.password = EnvSetting.fetch(:BASIC_AUTH_PASSWORD)
+
+  config.middleware = [
+    BasicAuthMiddleware,
+  ]
+
   config.assets.dirs = [
     "src/website/assets/build",
   ]
