@@ -126,11 +126,23 @@ gulp.task('build-webpack-assets', gulp.series(() => (
 
 
 /*
+ * Other tasks
+ * ~~~~~~~~~~~
+ */
+
+/* Task to move images to the build folder. */
+gulp.task('build-images', gulp.series(() => (
+  gulp.src(`${assetsDir}/img/**/*`)
+    .pipe(gulp.dest(`${buildDir}/img/`))
+)));
+
+
+/*
  * Global tasks
  * ~~~~~~~~~~~~
  */
 
-gulp.task('build', gulp.series(['build-webpack-assets']));
+gulp.task('build', gulp.series(['build-webpack-assets', 'build-images']));
 
 
 /*
