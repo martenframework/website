@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+mkdir -p ./tmp
+rm -rf ./tmp/marten
+git clone git@github.com:martenframework/marten.git ./tmp/marten
+cd ./tmp/marten/docs/
+npm i
+npm run build
