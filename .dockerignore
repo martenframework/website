@@ -2,4 +2,6 @@
 .git
 assets
 bin
+docs
+lib
 node_modules
