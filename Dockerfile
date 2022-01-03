@@ -17,6 +17,7 @@ RUN npm run gulp -- build --production
 
 RUN shards install
 RUN bin/marten collectassets --no-input
+RUN scripts/build_docs
 RUN crystal build src/server.cr -o bin/website
 
 CMD ["/app/bin/website"]
