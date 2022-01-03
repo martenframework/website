@@ -1,8 +1,9 @@
 #!/bin/sh -e
 
-mkdir -p ./tmp
-rm -rf ./tmp/marten
-cp -R ./lib/marten ./tmp/marten
-cd ./tmp/marten/docs/
+mkdir -p ./docs
+rm -rf ./docs/src
+rm -rf ./docs/build
+cp -R ./lib/marten ./docs/src
+cd ./docs/src/docs/
 npm i
-npm run build
+npm run -- docusaurus build --out-dir=../../build
