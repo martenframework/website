@@ -8,6 +8,7 @@ Marten.configure :production do |config|
 
   config.middleware = [
     BasicAuthMiddleware,
+    WWWRedirectMiddleware,
   ]
 
   config.assets.dirs = [
