@@ -2,6 +2,7 @@
 require "dotenv"
 require "marten"
 require "pg"
+require "sqlite3"
 
 # Project requirements.
 require "./common/**"

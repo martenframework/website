@@ -1,5 +1,9 @@
 version: 2.0
 shards:
+  ameba:
+    git: https://github.com/crystal-ameba/ameba.git
+    version: 0.14.3
+
   db:
     git: https://github.com/crystal-lang/crystal-db.git
     version: 0.10.1
@@ -19,4 +23,8 @@ shards:
   pg:
     git: https://github.com/will/crystal-pg.git
     version: 0.24.0
+
+  sqlite3:
+    git: https://github.com/crystal-lang/crystal-sqlite3.git
+    version: 0.18.0
 

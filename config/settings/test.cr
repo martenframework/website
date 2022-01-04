@@ -4,6 +4,7 @@ Marten.configure :test do |config|
     # specs suite is executed. Do not set these database names to the same names as the ones used for your development
     # or production environments.
     # If test database names are not explicitly set, your specs suite won't be allowed to run at all.
+    db.backend = :sqlite
     db.name = ":memory:"
   end
 end
