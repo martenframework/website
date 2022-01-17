@@ -18,7 +18,7 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.1.0.dev0+git.commit.0d1865ad3bab4c6611a9415e0c4f0b130266dc60
+    version: 0.1.0.dev0+git.commit.51bc839a71efb08a63e16b6d841f16c77c91fb7a
 
   pg:
     git: https://github.com/will/crystal-pg.git
