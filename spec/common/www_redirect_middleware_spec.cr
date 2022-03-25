@@ -44,7 +44,7 @@ describe WWWRedirectMiddleware do
         ->{ Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200) }
       )
 
-      response.should be_a Marten::HTTP::Response::PermanentRedirect
+      response.should be_a Marten::HTTP::Response::MovedPermanently
       response.headers["Location"].should eq "http://example.com/foo/bar"
     end
   end
