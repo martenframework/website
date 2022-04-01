@@ -13,7 +13,7 @@ class RavenMiddleware < Marten::Middleware
       event.logger ||= "marten"
       event.interface :http, {
         headers:      request.headers.to_h,
-        cookies:      request.cookies.to_stdlib.to_h.join("; ") { |_, cookie| cookie.to_cookie_header },
+        cookies:      prepare_cookies(request.cookies),
         method:       request.method,
         url:          build_full_url(request),
         query_string: request.query_params.as_query,
@@ -34,6 +34,10 @@ class RavenMiddleware < Marten::Middleware
       url << ":#{request.port}" if !["80", "443"].includes?(request.port)
       url << request.full_path
     end
+  end
+
+  private def prepare_cookies(cookies)
+    cookies.to_stdlib.to_h.join("; ") { |_, cookie| cookie.to_cookie_header }
   end
 
   private def prepare_data(data)
