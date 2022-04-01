@@ -7,6 +7,7 @@ Marten.configure :production do |config|
   config.basic_auth.password = EnvSetting.fetch(:BASIC_AUTH_PASSWORD, "insecure")
 
   config.middleware = [
+    RavenMiddleware,
     BasicAuthMiddleware,
     WWWRedirectMiddleware,
   ]
