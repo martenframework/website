@@ -1,14 +1,18 @@
 {% extend "base.html" %}
 
-{% block title %} Marten &ndash; The pragmatic web framework{% endblock %}
+{% block title %}Marten &ndash; The pragmatic web framework{% endblock %}
 
 {% block body_id %}home{% endblock %}
 
 {% block content %}
-<section class="hero">
-  <h1 class="title">The pragmatic web framework</h1>
-  <p class="subtitle">Marten is a Crystal web framework that makes building web applications easy, productive, and fun.</p>
-  <div class="button-wrap"><a href="/start" class="button is-primary is-inverted">Get started with Marten</a></div>
+<section class="hero is-medium is-gradient">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">The pragmatic web framework</h1>
+      <p class="subtitle">Marten is a Crystal web framework that makes building web applications easy, productive, and fun.</p>
+      <div class="button-wrap"><a href="/start" class="button is-primary is-inverted">Get started with Marten</a></div>
+    </div>
+  </div>
 </section>
 <section class="slant"></section>
 <div class="container">
