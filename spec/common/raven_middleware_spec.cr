@@ -228,5 +228,51 @@ describe RavenMiddleware do
 
       http_interface.cookies.should eq "test=value"
     end
+
+    it "does not capture HTTP not found exceptions" do
+      middleware = RavenMiddleware.new
+
+      expect_raises(Marten::HTTP::Errors::NotFound) do
+        middleware.call(
+          Marten::HTTP::Request.new(
+            ::HTTP::Request.new(
+              method: "PUT",
+              resource: "/foo/bar?param=val",
+              headers: HTTP::Headers{"Host" => "example.com", "Content-Type" => "application/x-www-form-urlencoded"},
+              body: "foo=bar&test=xyz&foo=baz"
+            )
+          ),
+          ->{
+            raise Marten::HTTP::Errors::NotFound.new("This is bad")
+            Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200)
+          }
+        )
+
+        Raven.instance.last_sent_event.should be_nil
+      end
+    end
+
+    it "does not capture route not found exceptions" do
+      middleware = RavenMiddleware.new
+
+      expect_raises(Marten::Routing::Errors::NoResolveMatch) do
+        middleware.call(
+          Marten::HTTP::Request.new(
+            ::HTTP::Request.new(
+              method: "PUT",
+              resource: "/foo/bar?param=val",
+              headers: HTTP::Headers{"Host" => "example.com", "Content-Type" => "application/x-www-form-urlencoded"},
+              body: "foo=bar&test=xyz&foo=baz"
+            )
+          ),
+          ->{
+            raise Marten::Routing::Errors::NoResolveMatch.new("This is bad")
+            Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200)
+          }
+        )
+
+        Raven.instance.last_sent_event.should be_nil
+      end
+    end
   end
 end
