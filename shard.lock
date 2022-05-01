@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 0.14.3
+    version: 1.0.0
 
   any_hash:
     git: https://github.com/sija/any_hash.cr.git
@@ -26,7 +26,7 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.1.0.dev0+git.commit.e62134b334e322c7b7bee9d7331a667f34e3cbcf
+    version: 0.1.0.dev0+git.commit.8e713afa34b82cb0f338891c1b1671593bea8aa7
 
   pg:
     git: https://github.com/will/crystal-pg.git
