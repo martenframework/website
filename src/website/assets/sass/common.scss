@@ -161,12 +161,34 @@ div#body-wrap {
   }
 }
 
-footer {
+footer.footer {
   position: relative;
   z-index: 10;
   margin-top: 3rem;
-  padding: 3rem 1.5rem 3rem;
-  background-color: $grey-lighter;
+  padding: 0;
+  background: $white;
+
+  .slant {
+    position: relative;
+    display: block;
+    background-color: $white;
+
+    @media (min-width: 768px) {
+      padding-top: 0 !important;
+
+      &:before {
+        content: "";
+        display: block;
+        height: 100px;
+        background: linear-gradient(to right top, #fafafa 49.9%, transparent 50.1%);
+      }
+    }
+  }
+
+  .container-wrapper {
+    padding: 3rem 1.5rem 6rem;
+    background: #fafafa;
+  }
 
   .column.recap {
     .logo-and-name {

@@ -1,5 +1,12 @@
 /* eslint-env browser */
 
+import feather from 'feather-icons';
+
+import controllers from './controllers/index.js';
+import DOMRouter from './core/DOMRouter.js';
+
+const router = new DOMRouter(controllers);
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initializes navbar-specific behaviours.
   const navBarWrapSelector = document.querySelector('#navbar-wrap');
@@ -42,4 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   window.dispatchEvent(new Event('resize'));
+
+  // Initializes feather icons.
+  feather.replace();
+
+  // Initializes the DOM router. The DOM router is used to execute specific portions of JS code for
+  // each specific page.
+  router.init();
 });

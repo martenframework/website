@@ -1,5 +1,5 @@
 body#home {
-  .hero {
+  section.hero {
     height: 45vh;
 
     p.subtitle {
@@ -13,10 +13,9 @@ body#home {
     }
   }
 
-  .slant {
+  section.hero-slant {
     position: relative;
     display: block;
-    padding-bottom: 30px;
     background-color: $white;
 
     @media (min-width: 768px) {
@@ -25,9 +24,78 @@ body#home {
       &:before {
         content: "";
         display: block;
-        height: 200px;
-        margin-bottom: 50px;
+        height: 100px;
         background: linear-gradient(to right bottom, $primary 49.9%, transparent 50.1%);
+      }
+    }
+  }
+
+  section#meet-marten {
+    margin-top: 1rem;
+
+    .container {
+      padding: 3rem 0;
+    }
+  }
+
+  section#batteries-included {
+    margin-top: 3rem;
+    background: #fdeded;
+
+    .slant {
+      position: relative;
+      display: block;
+      background-color: $white;
+
+      @media (min-width: 768px) {
+        padding-top: 0 !important;
+
+        &:before {
+          content: "";
+          display: block;
+          height: 100px;
+        }
+
+        &.top {
+          &:before {
+            background: linear-gradient(to right top, #fdeded 49.9%, transparent 50.1%);
+          }
+        }
+
+        &.bottom {
+          &:before {
+            background: linear-gradient(to right bottom, #fdeded 49.9%, transparent 50.1%);
+          }
+        }
+      }
+    }
+
+    .container {
+      padding: 3rem 0;
+
+      &#snippets-showcase {
+        .columns {
+          .column {
+            padding: 0.5rem 2rem;
+
+            @media (min-width: 768px) {
+              padding: 2rem;
+            }
+          }
+        }
+
+        .snippet {
+          pre {
+            padding: 0;
+            @include rounded(4px);
+          }
+        }
+
+        .separator {
+          margin: 2rem 0;
+          text-align: center;
+          color: $primary;
+        }
       }
     }
   }

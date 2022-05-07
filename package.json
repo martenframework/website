@@ -1,7 +1,9 @@
 {
   "private": true,
   "dependencies": {
-    "bulma": "^0.9.0"
+    "bulma": "^0.9.0",
+    "feather-icons": "^4.29.0",
+    "highlight.js": "^11.5.1"
   },
   "type": "module",
   "devDependencies": {
