@@ -1,6 +1,6 @@
-<pre><code class="language-crystal">class ArticleListView < Marten::Views::RecordList
-  model Article
-  template_name "article_list.html"
-  page_size 20
+<pre><code class="language-crystal">class ArticleListView < Marten::View
+  def get
+    render "articles/list.html", { articles: Article.all }
+  end
 end
 </code></pre>
