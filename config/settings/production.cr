@@ -6,11 +6,7 @@ Marten.configure :production do |config|
   config.basic_auth.username = EnvSetting.fetch(:BASIC_AUTH_USERNAME, "insecure")
   config.basic_auth.password = EnvSetting.fetch(:BASIC_AUTH_PASSWORD, "insecure")
 
-  config.middleware = [
-    RavenMiddleware,
-    BasicAuthMiddleware,
-    WWWRedirectMiddleware,
-  ]
+  config.middleware.unshift(RavenMiddleware, BasicAuthMiddleware, WWWRedirectMiddleware)
 
   config.assets.dirs = [
     "src/website/assets/build",

@@ -7,5 +7,9 @@ Marten.configure do |config|
     Website::App,
   ]
 
+  config.middleware = [
+    Marten::Middleware::GZip,
+  ]
+
   config.assets.app_dirs = false
 end
