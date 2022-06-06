@@ -13,7 +13,7 @@ RUN apt-get install -y nodejs libsqlite3-dev
 
 RUN npm install
 RUN npm rebuild node-sass
-RUN npm run gulp -- build --production
+RUN npm run gulp -- build --production --release
 
 RUN shards install
 RUN bin/marten collectassets --no-input
