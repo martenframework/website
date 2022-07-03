@@ -35,6 +35,18 @@ body#home {
 
     .container {
       padding: 3rem 0;
+
+      .showcased-item {
+        .icon-wrapper {
+          margin-bottom: 0.5rem;
+          color: $primary;
+
+          svg {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
     }
   }
 
@@ -58,7 +70,7 @@ body#home {
 
         &.top {
           &:before {
-            background: linear-gradient(to right top, #fdeded 49.9%, transparent 50.1%);
+            background: linear-gradient(to left top, #fdeded 49.9%, transparent 50.1%);
           }
         }
 
