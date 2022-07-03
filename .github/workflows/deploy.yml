@@ -8,8 +8,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: DigitalOcean App Platform deployment
-        uses: digitalocean/app_action@main
-        with:
-          app_name: ${{ secrets.DO_APP_NAME }}
-          token: ${{ secrets.DO_ACCESS_TOKEN }}
+      - name: Dummy
+        run: echo 'Dummy'
+      # - name: DigitalOcean App Platform deployment
+      #   uses: digitalocean/app_action@main
+      #   with:
+      #     app_name: ${{ secrets.DO_APP_NAME }}
+      #     token: ${{ secrets.DO_ACCESS_TOKEN }}
