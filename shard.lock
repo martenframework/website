@@ -26,7 +26,7 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.1.0.dev0+git.commit.06ae0927a23f18f30aa1c95335fcfa863999998b
+    version: 0.1.0.dev0+git.commit.3035a220a744675243dc1d9ee80c288a0a6582d8
 
   pg:
     git: https://github.com/will/crystal-pg.git
@@ -34,7 +34,7 @@ shards:
 
   raven:
     git: https://github.com/sija/raven.cr.git
-    version: 1.9.1
+    version: 1.9.2
 
   sqlite3:
     git: https://github.com/crystal-lang/crystal-sqlite3.git
