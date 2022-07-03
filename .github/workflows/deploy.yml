@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  qa:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: DigitalOcean App Platform deployment
