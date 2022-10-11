@@ -48,14 +48,14 @@ qa_js: lint_js
 .PHONY: format_crystal
 ## Perform and apply crystal formatting.
 format_crystal:
-	crystal tool format
+	crystal tool format --exclude docs
 
 .PHONY: lint lint_crystal lint_js
 ## Trigger code quality checks.
 lint: lint_crystal lint_js
 ## Trigger code Crystal quality checks.
 lint_crystal:
-	crystal tool format --check
+	crystal tool format --exclude docs --check
 	bin/ameba
 ## Trigger Javascript code quality checks (eslint).
 lint_js:
