@@ -2,6 +2,18 @@ body#home {
   section.hero {
     height: 45vh;
 
+    @include until($desktop) {
+      height: 55vh;
+    }
+
+    h1.title {
+      margin-top: 3rem;
+
+      @include until($desktop) {
+        margin-top: 4rem;
+      }
+    }
+
     p.subtitle {
       @media (min-width: 768px) {
         max-width: 75%;
@@ -37,6 +49,10 @@ body#home {
       padding: 3rem 0;
 
       .showcased-item {
+        @include until($desktop) {
+          padding: 2rem 3rem !important;
+        }
+
         .icon-wrapper {
           margin-bottom: 0.5rem;
           color: $primary;
@@ -85,13 +101,39 @@ body#home {
     .container {
       padding: 3rem 0;
 
-      &#snippets-showcase {
+      &#batteries-included-headline {
+        @include until($desktop) {
+          padding-bottom: 1rem;
+        }
+
         .columns {
           .column {
             padding: 0.5rem 2rem;
 
             @media (min-width: 768px) {
               padding: 2rem;
+            }
+          }
+        }
+      }
+
+      &#snippets-showcase {
+        @include until($desktop) {
+          padding: 1rem 0;
+        }
+
+        .columns {
+          .column {
+            padding: 0.5rem 2rem;
+
+            @media (min-width: 768px) {
+              padding: 2rem;
+            }
+
+            @include until($desktop) {
+              h3, p {
+                text-align: center;
+              }
             }
           }
         }
