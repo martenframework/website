@@ -5,8 +5,8 @@ html {
 body {
   @include until($desktop) {
     &.navbar-menu-opened {
-      position: fixed;
       overflow: hidden;
+      height: 100%;
     }
   }
 }

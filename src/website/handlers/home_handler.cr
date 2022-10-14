@@ -1,5 +1,5 @@
 module Website
-  class HomeView < Marten::Views::Template
+  class HomeHandler < Marten::Handlers::Template
     template_name "home.html"
   end
 end

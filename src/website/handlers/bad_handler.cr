@@ -1,5 +1,5 @@
 module Website
-  class BadView < Marten::View
+  class BadHandler < Marten::Handler
     def dispatch
       1 // 0
       respond "bad"

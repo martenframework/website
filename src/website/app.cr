@@ -1,4 +1,4 @@
-require "./views/**"
+require "./handlers/**"
 require "./routes"
 
 module Website

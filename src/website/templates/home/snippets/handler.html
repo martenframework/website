@@ -1,4 +1,4 @@
-<pre><code class="language-crystal">class ArticleListView < Marten::View
+<pre><code class="language-crystal">class ArticleListHandler < Marten::Handler
   def get
     render "articles/list.html", { articles: Article.all }
   end
