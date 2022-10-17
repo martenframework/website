@@ -13,11 +13,11 @@ RUN apt-get install -y nodejs libsqlite3-dev
 
 RUN npm install
 RUN npm rebuild node-sass
-RUN npm run gulp -- build --production --release
+RUN npm run gulp -- build --production
 
 RUN shards install
 RUN bin/marten collectassets --no-input
 RUN scripts/build_docs
-RUN crystal build src/server.cr -o bin/website
+RUN crystal build src/server.cr -o bin/website --release
 
 CMD ["/app/bin/website"]
