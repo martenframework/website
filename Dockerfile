@@ -1,4 +1,4 @@
-FROM crystallang/crystal:1.6.0
+FROM crystallang/crystal:1.6.1
 WORKDIR /app
 ARG GITHUB_TOKEN
 COPY . .
