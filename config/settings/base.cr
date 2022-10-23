@@ -10,6 +10,7 @@ Marten.configure do |config|
   config.middleware = [
     Marten::Middleware::GZip,
     Marten::Middleware::XFrameOptions,
+    Marten::Middleware::StrictTransportSecurity,
   ]
 
   config.assets.app_dirs = false
