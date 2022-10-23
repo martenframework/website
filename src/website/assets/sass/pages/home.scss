@@ -3,7 +3,7 @@ body#home {
     height: 45vh;
 
     @include until($desktop) {
-      height: 55vh;
+      height: auto !important;
     }
 
     h1.title {
