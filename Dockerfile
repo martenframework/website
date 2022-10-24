@@ -1,8 +1,6 @@
 FROM crystallang/crystal:1.6.1
 WORKDIR /app
-ARG GITHUB_TOKEN
 COPY . .
-RUN git config --global url."https://${GITHUB_TOKEN}@github.com".insteadOf "https://github.com"
 
 ENV MARTEN_ENV=production
 
