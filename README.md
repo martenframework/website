@@ -6,7 +6,7 @@ This repository contains the Marten Framework website project.
 
 ## System requirements
 
-* [Crystal](https://crystal-lang.org/) 1.2+
+* [Crystal](https://crystal-lang.org/) 1.6+
 * [Node.js](https://nodejs.org/en/) - 16.x
 
 ## Installation
