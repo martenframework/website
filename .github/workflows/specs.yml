@@ -1,0 +1,28 @@
+name: Specs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: "*"
+
+jobs:
+  specs:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    container:
+      image: crystallang/crystal:1.6.1
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install shards
+      run: shards install --ignore-crystal-version
+    - name: Cache Crystal
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/crystal
+        key: ${{ runner.os }}-crystal
+    - name: Setup .env file
+      run: cp .env.example .env
+    - name: Run tests
+      run: make tests
