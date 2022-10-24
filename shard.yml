@@ -8,7 +8,6 @@ dependencies:
     github: gdotdesign/cr-dotenv
   marten:
     github: martenframework/marten
-    branch: main
   pg:
     github: will/crystal-pg
   raven:
