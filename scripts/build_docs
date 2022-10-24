@@ -3,7 +3,12 @@
 mkdir -p ./docs
 rm -rf ./docs/src
 rm -rf ./docs/build
-cp -R ./lib/marten ./docs/src
-cd ./docs/src/docs/
+git clone https://github.com/martenframework/marten ./docs/src
+
+cd ./docs/src
+shards install
+crystal docs --output=docs/static/api
+
+cd ./docs
 npm i
 npm run -- docusaurus build --out-dir=../../build
