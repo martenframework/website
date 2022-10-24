@@ -1,5 +1,7 @@
 # Marten Framework Website
 
+[![CI](https://github.com/martenframework/website/workflows/Specs/badge.svg)](https://github.com/martenframework/website/actions) [![CI](https://github.com/martenframework/website/workflows/QA/badge.svg)](https://github.com/martenframework/website/actions)
+
 This repository contains the Marten Framework website project.
 
 ## System requirements
