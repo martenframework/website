@@ -14,4 +14,8 @@ Marten.configure do |config|
   ]
 
   config.assets.app_dirs = false
+
+  config.templates.context_producers.unshift(Website::GoogleSiteVerificationCodeContextProducer)
+
+  config.website.google_site_verification_code = EnvSetting.fetch(:GOOGLE_SITE_VERIFICATION_CODE, "notset")
 end
