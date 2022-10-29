@@ -5,13 +5,12 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
+  docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Dummy
-        run: echo 'Dummy'
-      - name: DigitalOcean App Platform deployment
-        uses: digitalocean/app_action@main
-        with:
-          app_name: ${{ secrets.DO_APP_NAME }}
-          token: ${{ secrets.DO_ACCESS_TOKEN }}
+      - run: |
+          curl -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer ${{ secrets.DO_ACCESS_TOKEN }}" \
+          -d '{"force_build":true}' \
+          "https://api.digitalocean.com/v2/apps/${{ secrets.DO_APP_ID }}/deployments"
