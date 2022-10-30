@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% asset 'img/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% asset 'img/favicon-16x16.png' %}">
     <link rel="stylesheet" type="text/css" href="{% asset 'App.css' %}" />
+    <meta name="description" content="{% block meta_description %}{% endblock meta_description %}" />
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock meta_keywords %}" />
   </head>
   <body
       id="{% block body_id %}id_body{% endblock body_id %}"
