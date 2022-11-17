@@ -34,7 +34,7 @@ The development server should be accessible at http://127.0.0.1:8000.
 The test suite can be run using the following command:
 
 ```shell
-$ make test
+$ make tests
 ```
 
 Code quality checks can be triggered using the following command:
