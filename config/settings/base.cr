@@ -17,5 +17,6 @@ Marten.configure do |config|
 
   config.templates.context_producers.unshift(Website::GoogleSiteVerificationCodeContextProducer)
 
+  config.website.discord_invitation_link = "https://discord.gg/499Vwt6kTc"
   config.website.google_site_verification_code = EnvSetting.fetch(:GOOGLE_SITE_VERIFICATION_CODE, "notset")
 end
