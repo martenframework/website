@@ -13,7 +13,7 @@ RUN npm install
 RUN npm rebuild node-sass
 RUN npm run gulp -- build --production
 
-RUN shards install
+RUN shards install --without-development
 RUN bin/marten collectassets --no-input
 RUN scripts/build_docs
 RUN crystal build src/server.cr -o bin/website --release
