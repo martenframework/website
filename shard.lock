@@ -14,7 +14,7 @@ shards:
 
   cmark:
     git: https://github.com/amauryt/cr-cmark-gfm.git
-    version: 0.1.2
+    version: 0.1.2+git.commit.a8fa0cf2da359444d110f2303f85bddf1158e417
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
