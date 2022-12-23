@@ -13,6 +13,10 @@ jobs:
       image: crystallang/crystal:1.6.2
     steps:
       - uses: actions/checkout@v1
+      - name: Install required packages
+        run: |
+          apt-get update
+          apt-get -yqq install cmake
       - name: Install shards
         run: shards install --ignore-crystal-version
       - name: Run QA checks

@@ -18,7 +18,7 @@ jobs:
     - name: Install required packages
       run: |
         apt-get update
-        apt-get -yqq install libsqlite3-dev
+        apt-get -yqq install libsqlite3-dev cmake
     - name: Install shards
       run: shards install --ignore-crystal-version
     - name: Cache Crystal
