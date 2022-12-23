@@ -7,7 +7,7 @@ ENV MARTEN_ENV=production
 RUN apt-get update
 RUN apt-get install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs libsqlite3-dev cmake
+RUN apt-get install -y nodejs libsqlite3-dev cmake libxml2
 
 RUN npm install
 RUN npm rebuild node-sass
