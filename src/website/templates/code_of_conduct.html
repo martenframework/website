@@ -1,0 +1,23 @@
+{% extend "base.html" %}
+
+{% block page_title %}Code of conduct{% endblock page_title %}
+
+{% block content %}
+<div class="hero is-medium is-gradient">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Code of conduct</h1>
+    </div>
+  </div>
+</div>
+<section class="hero-slant"></section>
+<div class="container mt-6 mb-6">
+  <div class="columns is-centered">
+    <div class="column is-three-fifths">
+      <div class="content p-3">
+        {{ code_of_conduct_html | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

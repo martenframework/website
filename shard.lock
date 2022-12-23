@@ -12,6 +12,10 @@ shards:
     git: https://github.com/sija/backtracer.cr.git
     version: 1.2.2
 
+  cmark:
+    git: https://github.com/amauryt/cr-cmark-gfm.git
+    version: 0.1.2
+
   db:
     git: https://github.com/crystal-lang/crystal-db.git
     version: 0.11.0

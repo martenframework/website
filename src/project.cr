@@ -1,4 +1,5 @@
 # Third party requirements.
+require "cmark"
 require "dotenv"
 require "marten"
 require "pg"

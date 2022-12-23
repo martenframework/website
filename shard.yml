@@ -4,6 +4,8 @@ version: 0.1.0
 crystal: 1.6.2
 
 dependencies:
+  cmark:
+    github: amauryt/cr-cmark-gfm
   dotenv:
     github: gdotdesign/cr-dotenv
   marten:

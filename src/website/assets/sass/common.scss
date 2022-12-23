@@ -159,6 +159,23 @@ div#body-wrap {
       font-weight: 300;
     }
   }
+
+  .hero-slant {
+    position: relative;
+    display: block;
+    background-color: $white;
+
+    @media (min-width: 768px) {
+      padding-top: 0 !important;
+
+      &:before {
+        content: "";
+        display: block;
+        height: 100px;
+        background: linear-gradient(to right bottom, $primary 49.9%, transparent 50.1%);
+      }
+    }
+  }
 }
 
 footer.footer {
