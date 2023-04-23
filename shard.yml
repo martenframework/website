@@ -11,13 +11,9 @@ dependencies:
     github: gdotdesign/cr-dotenv
   marten:
     github: martenframework/marten
-  pg:
-    github: will/crystal-pg
   raven:
     github: Sija/raven.cr
 
 development_dependencies:
   ameba:
     github: crystal-ameba/ameba
-  sqlite3:
-    github: crystal-lang/crystal-sqlite3

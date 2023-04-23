@@ -2,9 +2,7 @@
 require "cmark"
 require "dotenv"
 require "marten"
-require "pg"
 require "raven"
-require "sqlite3"
 
 # Project requirements.
 require "./common/**"
