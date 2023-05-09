@@ -1,4 +1,4 @@
-FROM crystallang/crystal:1.8.1
+FROM crystallang/crystal:1.8.2
 WORKDIR /app
 COPY . .
 
