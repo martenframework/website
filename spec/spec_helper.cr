@@ -15,3 +15,13 @@ Raven.configure do |config|
 end
 
 Spec.before_each &->WebMock.reset
+Spec.before_each do
+  Marten.templates.context_producers
+    .find(&.is_a?(Website::VersionContextProducer))
+    .try do |context_producer|
+      context_producer.as(Website::VersionContextProducer).version_data = {
+        "latest_version"       => "0.1.1",
+        "latest_major_version" => "0.1",
+      }
+    end
+end
