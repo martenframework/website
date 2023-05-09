@@ -1,6 +1,7 @@
 # Third party requirements.
 require "cmark"
 require "dotenv"
+require "http/client"
 require "marten"
 require "raven"
 
