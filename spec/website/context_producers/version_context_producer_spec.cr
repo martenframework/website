@@ -1,6 +1,10 @@
 require "./spec_helper"
 
 describe Website::VersionContextProducer do
+  before_each do
+    WebMock.reset
+  end
+
   describe "#produce" do
     it "returns the expected context hash when the latest tag is a patch release tag" do
       WebMock

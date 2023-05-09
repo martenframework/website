@@ -14,14 +14,35 @@ Raven.configure do |config|
   config.dsn = "dummy://12345:67890@sentry.localdomain:3000/sentry/42"
 end
 
-Spec.before_each &->WebMock.reset
 Spec.before_each do
-  Marten.templates.context_producers
-    .find(&.is_a?(Website::VersionContextProducer))
-    .try do |context_producer|
-      context_producer.as(Website::VersionContextProducer).version_data = {
-        "latest_version"       => "0.1.1",
-        "latest_major_version" => "0.1",
-      }
-    end
+  WebMock.reset
+
+  WebMock
+    .stub(:get, "https://api.github.com/repos/martenframework/marten/tags")
+    .to_return(
+      body: <<-JSON
+      [
+        {
+          "name": "v0.1.3",
+          "zipball_url": "https://example.com",
+          "tarball_url": "https://example.com",
+          "commit": {
+            "sha": "12345",
+            "url": "https://example.com"
+          },
+          "node_id": "12345"
+        },
+        {
+          "name": "v0.1.2",
+          "zipball_url": "https://example.com",
+          "tarball_url": "https://example.com",
+          "commit": {
+            "sha": "12345",
+            "url": "https://example.com"
+          },
+          "node_id": "12345"
+        }
+      ]
+    JSON
+    )
 end
