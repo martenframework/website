@@ -18,29 +18,17 @@ Spec.before_each do
   WebMock.reset
 
   WebMock
-    .stub(:get, "https://api.github.com/repos/martenframework/marten/tags")
+    .stub(:get, "https://api.github.com/repos/martenframework/marten/releases")
     .to_return(
       body: <<-JSON
       [
         {
-          "name": "v0.1.3",
-          "zipball_url": "https://example.com",
-          "tarball_url": "https://example.com",
-          "commit": {
-            "sha": "12345",
-            "url": "https://example.com"
-          },
-          "node_id": "12345"
+          "tag_name": "v0.2.3",
+          "published_at": "2022-10-24T23:44:21Z"
         },
         {
-          "name": "v0.1.2",
-          "zipball_url": "https://example.com",
-          "tarball_url": "https://example.com",
-          "commit": {
-            "sha": "12345",
-            "url": "https://example.com"
-          },
-          "node_id": "12345"
+          "tag_name": "v0.2.2",
+          "published_at": "2022-10-24T23:44:21Z"
         }
       ]
     JSON
