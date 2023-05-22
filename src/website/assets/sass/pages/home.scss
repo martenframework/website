@@ -1,6 +1,6 @@
 body#home {
   section.hero {
-    height: 45vh;
+    height: 55vh;
 
     @include until($desktop) {
       height: auto !important;
@@ -15,6 +15,8 @@ body#home {
     }
 
     p.subtitle {
+      margin-bottom: 2.5rem;
+
       @media (min-width: 768px) {
         max-width: 75%;
       }
@@ -22,6 +24,43 @@ body#home {
 
     a.button {
       padding: 1.5rem 2.5rem;
+    }
+
+    div.latest-release {
+      color: $white;
+      font-size: 1rem;
+      margin-top: 2rem;
+
+      div.line {
+        text-align: left;
+
+        &:first-child {
+          text-align: right;
+        }
+
+        hr {
+          display: inline-block;
+          height: 1px;
+          margin: 0.8rem 0;
+          opacity: 0.3;
+          width: 50%;
+        }
+      }
+
+      div.text {
+        font-weight: 600;
+        color: #fdeded;
+
+        a {
+          color: $white;
+          font-size: 0.9rem;
+
+          &:hover, &:focus {
+            background: transparent;
+            color: $grey-lighter;
+          }
+        }
+      }
     }
   }
 

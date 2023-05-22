@@ -46,6 +46,7 @@ div#body-wrap {
 
       a {
         color: $white;
+        font-weight: 500;
         @include transition(0.25s);
 
         &:hover, &:focus {
