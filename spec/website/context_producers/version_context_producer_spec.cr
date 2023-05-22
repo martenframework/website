@@ -27,8 +27,12 @@ describe Website::VersionContextProducer do
       context_producer = Website::VersionContextProducer.new
       context_producer.produce.should eq(
         {
-          "latest_version"       => "0.2.3",
-          "latest_version_date"  => Time.parse_rfc3339("2022-10-24T23:44:21Z").to_s("%h %-d, %Y"),
+          "latest_version"      => "0.2.3",
+          "latest_version_date" => (
+            Time.parse_rfc3339("2022-10-24T23:44:21Z")
+              .in(Time::Location.load("EST"))
+              .to_s("%h %-d, %Y")
+          ),
           "latest_major_version" => "0.2",
         }
       )
@@ -55,8 +59,12 @@ describe Website::VersionContextProducer do
       context_producer = Website::VersionContextProducer.new
       context_producer.produce.should eq(
         {
-          "latest_version"       => "0.2.0",
-          "latest_version_date"  => Time.parse_rfc3339("2022-10-24T23:44:21Z").to_s("%h %-d, %Y"),
+          "latest_version"      => "0.2.0",
+          "latest_version_date" => (
+            Time.parse_rfc3339("2022-10-24T23:44:21Z")
+              .in(Time::Location.load("EST"))
+              .to_s("%h %-d, %Y")
+          ),
           "latest_major_version" => "0.2",
         }
       )

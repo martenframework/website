@@ -12,7 +12,9 @@ module Website
 
         parsed_body = JSON.parse(response.body)
         latest_release_tag = parsed_body.as_a.first.as_h["tag_name"].to_s
-        latest_release_date = Time.parse_rfc3339(parsed_body.as_a.first.as_h["published_at"].to_s)
+        latest_release_date = Time
+          .parse_rfc3339(parsed_body.as_a.first.as_h["published_at"].to_s)
+          .in(Time::Location.load("EST"))
 
         {
           "latest_version"       => latest_release_tag.scan(/^v(\d\.\d\.+\d+)/).try(&.first.captures.first).not_nil!,
