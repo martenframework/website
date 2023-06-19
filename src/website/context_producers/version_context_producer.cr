@@ -16,8 +16,11 @@ module Website
           .parse_rfc3339(parsed_body.as_a.first.as_h["published_at"].to_s)
           .in(Time::Location.load("EST"))
 
+        latest_version = latest_release_tag.scan(/^v(\d\.\d\.+\d+)/).try(&.first.captures.first).not_nil!
+        latest_version = latest_version[0..-3] if latest_version.ends_with?(".0")
+
         {
-          "latest_version"       => latest_release_tag.scan(/^v(\d\.\d\.+\d+)/).try(&.first.captures.first).not_nil!,
+          "latest_version"       => latest_version,
           "latest_version_date"  => latest_release_date.to_s("%h %-d, %Y"),
           "latest_major_version" => latest_release_tag.scan(/^v(\d\.\d)\.+\d+$/).try(&.first.captures.first).not_nil!,
         }
