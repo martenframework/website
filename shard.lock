@@ -30,7 +30,11 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.2.3
+    version: 0.3.0
+
+  msgpack:
+    git: https://github.com/crystal-community/msgpack-crystal.git
+    version: 1.3.4
 
   raven:
     git: https://github.com/sija/raven.cr.git
