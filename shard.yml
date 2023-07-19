@@ -1,7 +1,7 @@
 name: website
 version: 0.1.0
 
-crystal: 1.9.0
+crystal: 1.9.2
 
 dependencies:
   cmark:
