@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.4.3+git.commit.a33f98624a30a62cdf03affe32e7469ab2287f9f
+    version: 1.5.0+git.commit.7b8316f0616ef140cd29b7bf9d7e242009f80d1c
 
   any_hash:
     git: https://github.com/sija/any_hash.cr.git
@@ -30,7 +30,7 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.3.1
+    version: 0.3.2
 
   msgpack:
     git: https://github.com/crystal-community/msgpack-crystal.git
