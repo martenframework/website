@@ -7,7 +7,7 @@ Marten.configure :production do |config|
   config.strict_transport_security.max_age = 3600
 
   config.middleware.unshift(
-    RavenMiddleware,
+    Raven::Marten::Middleware,
     WWWRedirectMiddleware,
   )
 

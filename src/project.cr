@@ -3,7 +3,7 @@ require "cmark"
 require "dotenv"
 require "http/client"
 require "marten"
-require "raven"
+require "marten_raven_middleware"
 
 # Project requirements.
 require "./common/**"

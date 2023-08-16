@@ -11,8 +11,8 @@ dependencies:
     github: gdotdesign/cr-dotenv
   marten:
     github: martenframework/marten
-  raven:
-    github: Sija/raven.cr
+  marten_raven_middleware:
+    github: ellmetha/marten-raven-middleware
 
 development_dependencies:
   ameba:
