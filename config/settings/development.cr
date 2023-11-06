@@ -1,4 +1,4 @@
-require "socket"
+require "socket/ip_socket"
 
 Marten.configure :development do |config|
   config.debug = true
@@ -8,11 +8,10 @@ Marten.configure :development do |config|
     Path["src/website/assets"].expand,
   ]
 
-  webpack_sock = Socket.tcp(Socket::Family::INET)
-  begin
-    webpack_sock.bind("localhost", 8080)
-  rescue Socket::BindError
+  tmp_stdout = IO::Memory.new
+  Process.run("lsof -i:8080", shell: true, output: tmp_stdout)
+
+  if !tmp_stdout.rewind.gets_to_end.empty?
     config.assets.url = "http://localhost:8080/assets/"
   end
-  webpack_sock.close
 end
