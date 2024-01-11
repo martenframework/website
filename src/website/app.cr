@@ -1,5 +1,6 @@
 require "./context_producers/**"
 require "./handlers/**"
+require "./models/**"
 require "./routes"
 require "./settings"
 

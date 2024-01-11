@@ -1,0 +1,40 @@
+{% extend "base.html" %}
+
+{% block page_title %}{{ news.title }}{% endblock page_title %}
+{% block meta_description %}{{ news.description }}{% endblock meta_description %}
+
+{% block html_head %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="{% asset 'img/1000x420_logo.jpg' %}" />
+<meta name="twitter:image" content="{% asset 'img/1000x420_logo.jpg' %}" />
+<meta property="og:url" content="{{ request.scheme }}://{{ request.host }}{% url 'website:news_detail' slug: news.slug %}" />
+<meta property="og:locale" content="en" />
+<meta property="og:title" content="{{ news.title }} | Marten" />
+<meta property="og:description" content="{{ news.description }}" />
+{% endblock html_head %}
+
+{% block body_id %}news_detail{% endblock %}
+
+{% block content %}
+<div class="hero is-medium is-gradient">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">{{ news.title }}</h1>
+      <p class="subtitle mb-0">Posted by <a href="{{ news.author_github }}" target="_blank">{{ news.author_name}}</a> on {{ news.formatted_publication_date }}</p>
+      <div class="avatar"><a href="{{ news.author_github }}" target="_blank"><img src="{{ news.author_github }}.png" alt="{{ news.author_name }}'s picture" /></a></div>
+    </div>
+  </div>
+</div>
+<section class="hero-slant"></section>
+<div class="container mt-6 mb-6">
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <div class="content">
+          {{ news.html | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

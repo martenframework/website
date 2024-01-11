@@ -160,13 +160,6 @@ body#home {
           }
         }
 
-        .snippet {
-          pre {
-            padding: 0;
-            @include rounded(4px);
-          }
-        }
-
         .separator {
           margin: 2rem 0;
           text-align: center;

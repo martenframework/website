@@ -6,7 +6,6 @@ require "marten/spec"
 require "webmock"
 
 require "../src/project"
-require "./ext/**"
 
 Log.setup(:error)
 

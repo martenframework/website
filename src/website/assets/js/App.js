@@ -1,6 +1,7 @@
 /* eslint-env browser */
 
 import feather from 'feather-icons';
+import hljs from 'highlight.js';
 
 import controllers from './controllers/index.js';
 import DOMRouter from './core/DOMRouter.js';
@@ -52,6 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initializes feather icons.
   feather.replace();
+
+  // Initializes Highlight JS.
+  document.querySelectorAll('pre code.language-html').forEach((el) => {
+    el.innerHTML = el.innerHTML
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  });
+
+  document.querySelectorAll('pre code').forEach((el) => {
+    hljs.highlightElement(el);
+  });
 
   // Initializes the DOM router. The DOM router is used to execute specific portions of JS code for
   // each specific page.

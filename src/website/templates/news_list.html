@@ -1,0 +1,46 @@
+{% extend "base.html" %}
+
+{% block page_title %}Latest news{% endblock page_title %}
+
+{% block body_id %}news_list{% endblock %}
+
+{% block content %}
+<div class="hero is-medium is-gradient">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">News</h1>
+      <p class="subtitle mb-0">The latest Marten updates and news.</p>
+    </div>
+  </div>
+</div>
+<section class="hero-slant"></section>
+<div class="container mt-6 mb-6">
+  {% for news in news_page %}
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <div class="content is-medium">
+          <div class="subtitle is-size-4">{{ news.formatted_publication_date }}</div>
+          <div class="title is-size-3">
+            <a href="{% url 'website:news_detail' slug: news.slug %}">{{ news.title }}</a>
+          </div>
+          <p>{{ news.description }}</p>
+          <div><a href="{% url 'website:news_detail' slug: news.slug %}" class="button is-primary is-outlined">Read more</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+  {% if previous_page_number || next_page_number %}
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <nav class="pagination" role="navigation" aria-label="pagination">
+          {% if next_page_number %}<a class="pagination-next" href="?page={{ next_page_number }}">See more news...</a>{% endif %}
+        </nav>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</div>
+{% endblock content %}

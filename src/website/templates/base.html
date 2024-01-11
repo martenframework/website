@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="{% asset 'App.css' %}" />
     <meta name="description" content="{% block meta_description %}{% endblock meta_description %}" />
     <meta name="keywords" content="{% block meta_keywords %}{% endblock meta_keywords %}" />
+    {% block html_head %}
+    {% endblock html_head %}
   </head>
   <body
       id="{% block body_id %}id_body{% endblock body_id %}"
@@ -41,6 +43,9 @@
               <div class="navbar-end">
                 <a href="/docs" class="navbar-item">
                   Documentation
+                </a>
+                <a href="{% url 'website:news_list' %}" class="navbar-item">
+                  News
                 </a>
                 <a href="{% url 'website:chat' %}" class="navbar-item" target="_blank">
                   Chat

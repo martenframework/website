@@ -20,9 +20,7 @@ a {
   @include transition(0.25s, ease-in-out);
 
   &.button {
-    &.is-text {
-      text-decoration: none;
-    }
+    text-decoration: none !important;
   }
 }
 
@@ -180,6 +178,23 @@ div#body-wrap {
         height: 100px;
         background: linear-gradient(to right bottom, $primary 49.9%, transparent 50.1%);
       }
+    }
+  }
+
+  pre {
+    padding: 0;
+    @include rounded(4px);
+  }
+}
+
+.content {
+  a {
+    @include transition(0.25s, ease-in-out);
+    color: $primary;
+
+    &:hover, &:focus {
+      color: $primary;
+      text-decoration: underline;
     }
   }
 }

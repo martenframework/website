@@ -1,0 +1,39 @@
+body#news_detail {
+  .hero {
+    h1.title {
+      @media (min-width: $desktop) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+      }
+    }
+
+    p.subtitle {
+      margin-top: 2rem !important;
+      font-size: 1rem !important;
+
+      a {
+        color: $white;
+        font-weight: 500;
+
+        &:hover, &:focus {
+          background: transparent;
+          color: $grey-lighter;
+        }
+      }
+    }
+
+    div.avatar {
+      margin-top: 2rem;
+
+      img {
+        width: 50px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .content {
+    font-size: 18px;
+  }
+}
