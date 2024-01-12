@@ -5,8 +5,8 @@
 
 {% block html_head %}
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:image" content="{% asset 'img/1000x420_logo.jpg' %}" />
-<meta name="twitter:image" content="{% asset 'img/1000x420_logo.jpg' %}" />
+<meta property="og:image" content="{{ request.scheme }}://{{ request.host }}{% asset 'img/1000x420_logo.jpg' %}" />
+<meta name="twitter:image" content="{{ request.scheme }}://{{ request.host }}{% asset 'img/1000x420_logo.jpg' %}" />
 <meta property="og:url" content="{{ request.scheme }}://{{ request.host }}{% url 'website:news_detail' slug: news.slug %}" />
 <meta property="og:locale" content="en" />
 <meta property="og:title" content="{{ news.title }} | Marten" />
