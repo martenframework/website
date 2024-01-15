@@ -4,9 +4,7 @@ module Website
 
     template_name "code_of_conduct.html"
 
-    def context
-      {code_of_conduct_html: code_of_conduct_html}
-    end
+    before_render :prepare_context
 
     private def code_of_conduct_html
       {% begin %}
@@ -15,6 +13,10 @@ module Website
         source.gsub(/<h1>.*<\/h1>/, "")
       end
       {% end %}
+    end
+
+    private def prepare_context
+      context[:code_of_conduct_html] = code_of_conduct_html
     end
   end
 end
