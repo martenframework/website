@@ -7,6 +7,7 @@ module Website
     path "/chat", ChatHandler, name: "chat"
     path "/code-of-conduct", CodeOfConductHandler, name: "code_of_conduct"
     path "/robots.txt", RobotsHandler, name: "robots"
+    path "/sitemap.xml", SitemapHandler, name: "sitemap"
     # path "/bad", BadHandler, name: "bad"
   end
 end

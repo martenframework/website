@@ -13,6 +13,10 @@ module Website
     getter slug
     getter title
 
+    def self.all : Array(News)
+      manifest.values
+    end
+
     def self.get(slug : String) : News?
       manifest[slug]?
     end

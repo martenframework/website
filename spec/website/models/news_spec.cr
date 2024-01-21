@@ -1,6 +1,15 @@
 require "./spec_helper"
 
 describe Website::News do
+  describe "::all" do
+    it "returns all the news" do
+      news = Website::News.all
+
+      (news.size > 1).should be_true
+      news.all?(Website::News).should be_true
+    end
+  end
+
   describe "::get" do
     it "returns the news corresponding to the given slug" do
       news = Website::News.get("2023-07-10-marten-bugfix-release-0.3.1")

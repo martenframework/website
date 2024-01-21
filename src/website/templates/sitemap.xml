@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+  <loc>{{ request.scheme }}://{{ request.host }}</loc>
+</url>
+<url>
+  <loc>{{ request.scheme }}://{{ request.host }}{% url 'website:code_of_conduct' %}</loc>
+</url>
+{% for news_entry in news %}
+<url>
+  <loc>{{ request.scheme }}://{{ request.host }}{% url 'website:news_detail' slug: news_entry.slug %}</loc>
+  <lastmod>{{ news_entry.publication_date | time: "%Y-%m-%d" }}</lastmod>
+</url>
+{% endfor %}
+</urlset>
