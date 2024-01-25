@@ -8,6 +8,7 @@ module Website
       news = News.get(slug: params["slug"].to_s)
       raise Marten::HTTP::Errors::NotFound.new if news.nil?
 
+      context[:request] = request
       context[:news] = news
     end
   end
