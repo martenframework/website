@@ -2,7 +2,7 @@
 
 Today we've issued the [0.4.1 bugfix release](https://martenframework.com/docs/the-marten-project/release-notes/0.4.1).
 
-## Changes since 0.4.1
+## Changes since 0.4.0
 
 Please head over to the [official Marten release notes](https://martenframework.com/docs/the-marten-project/release-notes/0.4.1) for an overview of the changes that are part of this bugfix release.
 
