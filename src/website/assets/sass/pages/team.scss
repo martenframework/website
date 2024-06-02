@@ -1,0 +1,128 @@
+body#team {
+  section#core-team {
+    margin-top: 1rem;
+
+    .container {
+      padding: 3rem 0;
+
+      div.member {
+        div.avatar {
+          margin-top: 2rem;
+          margin-bottom: 0.75rem;
+
+          a {
+            &:hover, &:focus {
+              text-decoration: none;
+
+              .image-wrapper {
+                border-color: $primary;
+              }
+            }
+
+            .image-wrapper {
+              border-radius: 50%;
+              border: 3px solid $grey-lighter;
+              display: inline-block;
+              vertical-align: middle;
+              width: 210px;
+              height: 210px;
+              @include transition(0.25s, ease-in-out);
+
+              img {
+                margin-top: 3px;
+                width: 200px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+
+        div.firstname {
+          a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $primary;
+
+            &:hover, &:focus {
+              color: $grey-dark;
+            }
+          }
+        }
+
+        div.location {
+          font-weight: bold;
+          color: $black;
+        }
+
+        div.since {
+          font-style: italic;
+          color: $grey-dark;
+        }
+      }
+    }
+  }
+
+  section#contributors {
+    margin-top: 3rem;
+    background: #fdeded;
+
+    .slant {
+      position: relative;
+      display: block;
+      background-color: $white;
+
+      @media (min-width: 768px) {
+        padding-top: 0 !important;
+
+        &:before {
+          content: "";
+          display: block;
+          height: 100px;
+        }
+
+        &.top {
+          &:before {
+            background: linear-gradient(to left top, #fdeded 49.9%, transparent 50.1%);
+          }
+        }
+
+        &.bottom {
+          &:before {
+            background: linear-gradient(to right bottom, #fdeded 49.9%, transparent 50.1%);
+          }
+        }
+      }
+    }
+  }
+
+  section#contribute {
+    margin-top: 3rem;
+
+    .columns {
+      .column {
+        padding: 0.5rem 2rem;
+
+        @media (min-width: 768px) {
+          padding: 2rem;
+        }
+
+        div.icon-wrapper {
+          color: $grey-light;
+
+          svg {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+        h2 {
+          margin-top: 1rem;
+        }
+
+        div.button-wrapper {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}

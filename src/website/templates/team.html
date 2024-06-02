@@ -1,0 +1,82 @@
+{% extend "base.html" %}
+
+{% block page_title %}Team{% endblock page_title %}
+
+{% block body_id %}team{% endblock %}
+
+{% block content %}
+<div class="hero is-medium is-gradient">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Team</h1>
+      <p class="subtitle mb-0">The people behind the framework.</p>
+    </div>
+  </div>
+</div>
+<section class="hero-slant"></section>
+<section id="core-team">
+  <div class="container has-text-centered">
+    <div class="columns is-centered">
+      <div class="column p-4 is-two-thirds">
+        <div class="content">
+          <h2 class="has-text-primary has-text-weight-bold is-size-2">The core team</h2>
+          <p class="subtitle">The core team drives the development and evolution of the framework. These long term contributors are responsible for reviewing and merging pull requests, implementing new features, and releasing new versions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column p-5 is-one-third member">
+        <div class="avatar">
+          <a href="https://github.com/ellmetha" target="_blank">
+            <span class="image-wrapper">
+              <img src="https://github.com/ellmetha.png" alt="Morgan's picture" />
+            </span>
+          </a>
+        </div>
+        <div class="firstname"><a href="https://github.com/ellmetha" target="_blank">Morgan</a></div>
+        <div class="location">Canada</div>
+        <div class="since">Since 2020</div>
+      </div>
+      <div class="column p-5 is-one-third member">
+        <div class="avatar"><a href="https://github.com/treagod" target="_blank">
+          <span class="image-wrapper">
+            <img src="https://github.com/treagod.png" alt="Marvin's picture" />
+          </span>
+        </div>
+        <div class="firstname"><a href="https://github.com/treagod" target="_blank">Marvin</a></div>
+        <div class="location">Germany</div>
+        <div class="since">Since 2024</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section id="contributors">
+  <div class="slant top"></div>
+  <div class="container mt-3 mb-6 is-max-desktop has-text-centered">
+    <div class="columns is-centered">
+      <div class="column pt-6 pb-6 is-three-quarters">
+        <div class="content pt-4 pb-4">
+          <h2 class="has-text-primary has-text-weight-bold is-size-2">Contributors</h2>
+          <p class="subtitle">Contributors are essential for the development and improvement of the Marten web framework. They actively engage in coding, bug reporting, community discussions, and documentation enhancements. All contributions are <a href="https://github.com/martenframework/marten/graphs/contributors" target="_blank">tracked on GitHub</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slant bottom"></div>
+</section>
+<section id="contribute">
+  <div class="container is-max-desktop has-text-centered">
+    <div class="columns is-centered">
+      <div class="column is-three-quarters">
+        <div class="content">
+          <div class="icon-wrapper"><i data-feather="github"></i></div>
+          <h2 class="has-text-primary has-text-weight-bold is-size-2">Contribute on GitHub</h2>
+          <p class="subtitle">The Marten framework is open source and is distributed under the MIT license. It is maintained and developed on GitHub.</p>
+          <div class="button-wrapper"><a href="https://github.com/martenframework/marten" target="_blank" class="button is-medium is-primary">Contribute</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
