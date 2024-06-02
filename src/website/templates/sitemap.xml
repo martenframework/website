@@ -4,7 +4,13 @@
   <loc>{{ request.scheme }}://{{ request.host }}</loc>
 </url>
 <url>
+  <loc>{{ request.scheme }}://{{ request.host }}{% url 'website:team' %}</loc>
+</url>
+<url>
   <loc>{{ request.scheme }}://{{ request.host }}{% url 'website:code_of_conduct' %}</loc>
+</url>
+<url>
+  <loc>{{ request.scheme }}://{{ request.host }}{% url 'website:news_list' %}</loc>
 </url>
 {% for news_entry in news %}
 <url>
