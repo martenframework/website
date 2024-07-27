@@ -1,4 +1,10 @@
 news:
+  - title: "Marten bugfix release: 0.5.1"
+    description: Marten 0.5.1 introduces bug fixes, enhancing the stability and performance of the framework for a more reliable development experience.
+    file: 2024/2024-07-27-marten-bugfix-release-0.5.1.md
+    author:
+      name: Morgan Aubert
+      github: https://github.com/ellmetha
   - title: "Marten 0.5: Relations pre-fetching, model scopes, enum fields, and more!"
     description: "Check out the new 0.5 release: Leverage pre-fetched relations in querysets, model scopes, enum fields for models and schemas, raw SQL predicates, and more!"
     file: 2024/2024-07-13-marten-release-0.5.md
