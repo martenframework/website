@@ -23,7 +23,7 @@ describe WWWRedirectMiddleware do
             headers: HTTP::Headers{"Host" => "example.com"}
           )
         ),
-        ->{ Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200) }
+        -> { Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200) }
       )
 
       response.should be_a Marten::HTTP::Response
@@ -41,7 +41,7 @@ describe WWWRedirectMiddleware do
             headers: HTTP::Headers{"Host" => "www.example.com"}
           )
         ),
-        ->{ Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200) }
+        -> { Marten::HTTP::Response.new("It works!", content_type: "text/plain", status: 200) }
       )
 
       response.should be_a Marten::HTTP::Response::MovedPermanently

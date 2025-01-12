@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.6.3+git.commit.51cb88e4fb9016981beb78726dff881c2c1dac4a
+    version: 1.7.0-dev+git.commit.e113669f922132b3cfa4b86f72e73644f337989c
 
   any_hash:
     git: https://github.com/sija/any_hash.cr.git
@@ -26,7 +26,7 @@ shards:
 
   i18n:
     git: https://github.com/crystal-i18n/i18n.git
-    version: 0.2.1
+    version: 0.2.2
 
   marten:
     git: https://github.com/martenframework/marten.git

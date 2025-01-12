@@ -59,7 +59,7 @@ module Website
       @description : String,
       @author_name : String,
       @author_github : String,
-      @content : String
+      @content : String,
     )
     end
 
