@@ -11,17 +11,17 @@ describe Website::VersionContextProducer do
         .stub(:get, "https://api.github.com/repos/martenframework/marten/releases")
         .to_return(
           body: <<-JSON
-            [
-              {
-                "tag_name": "v0.2.3",
-                "published_at": "2022-10-24T23:44:21Z"
-              },
-              {
-                "tag_name": "v0.2.2",
-                "published_at": "2022-10-22T23:44:21Z"
-              }
-            ]
-          JSON
+              [
+                {
+                  "tag_name": "v0.2.3",
+                  "published_at": "2022-10-24T23:44:21Z"
+                },
+                {
+                  "tag_name": "v0.2.2",
+                  "published_at": "2022-10-22T23:44:21Z"
+                }
+              ]
+            JSON
         )
 
       context_producer = Website::VersionContextProducer.new
@@ -43,17 +43,17 @@ describe Website::VersionContextProducer do
         .stub(:get, "https://api.github.com/repos/martenframework/marten/releases")
         .to_return(
           body: <<-JSON
-            [
-              {
-                "tag_name": "v0.2.0",
-                "published_at": "2022-10-24T23:44:21Z"
-              },
-              {
-                "tag_name": "v0.1.5",
-                "published_at": "2022-10-22T23:44:21Z"
-              }
-            ]
-          JSON
+              [
+                {
+                  "tag_name": "v0.2.0",
+                  "published_at": "2022-10-24T23:44:21Z"
+                },
+                {
+                  "tag_name": "v0.1.5",
+                  "published_at": "2022-10-22T23:44:21Z"
+                }
+              ]
+            JSON
         )
 
       context_producer = Website::VersionContextProducer.new
