@@ -21,11 +21,6 @@ jobs:
         apt-get -yqq install libsqlite3-dev cmake build-essential
     - name: Install shards
       run: shards install --ignore-crystal-version
-    - name: Cache Crystal
-      uses: actions/cache@v1
-      with:
-        path: ~/.cache/crystal
-        key: ${{ runner.os }}-crystal
     - name: Setup .env file
       run: cp .env.example .env
     - name: Run tests
