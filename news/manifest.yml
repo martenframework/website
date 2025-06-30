@@ -1,4 +1,10 @@
 news:
+  - title: "Marten bugfix release: 0.5.7"
+    description: Marten 0.5.7 introduces bug fixes, enhancing the stability and performance of the framework for a more reliable development experience.
+    file: 2025/2025-06-30-marten-bugfix-release-0.5.7.md
+    author:
+      name: Morgan Aubert
+      github: https://github.com/ellmetha
   - title: "Marten bugfix release: 0.5.6"
     description: Marten 0.5.6 introduces bug fixes, enhancing the stability and performance of the framework for a more reliable development experience.
     file: 2025/2025-05-14-marten-bugfix-release-0.5.6.md
