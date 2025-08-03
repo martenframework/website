@@ -8,7 +8,7 @@ git clone https://github.com/martenframework/marten ./docs/src
 cd ./docs/src
 shards install
 crystal docs --output=docs/static/api/dev
-for version in 0.3.4 0.4.5 0.5.0
+for version in 0.4.5 0.5.7 0.6.0
 do
   git checkout v$version
   doc_version=$(echo $version | rev | cut -c3- | rev)
