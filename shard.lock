@@ -30,7 +30,7 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.5.7
+    version: 0.6.0
 
   marten_raven_middleware:
     git: https://github.com/ellmetha/marten-raven-middleware.git
