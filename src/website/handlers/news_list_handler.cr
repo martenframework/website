@@ -10,7 +10,7 @@ module Website
       raise Marten::HTTP::Errors::NotFound.new if news.empty?
 
       has_previous_page = page_number > 1
-      has_next_page = News.page(page_number + 1).any?
+      has_next_page = News.page(page_number + 1).present?
 
       context[:news_page] = news
       context[:previous_page_number] = has_previous_page ? page_number - 1 : nil
