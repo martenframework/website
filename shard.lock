@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.7.0-dev+git.commit.66c7a5461a450016dd6752c3c8a476d8d79da356
+    version: 1.7.0-dev+git.commit.a74c675501891beba1ef0eb4ad926b41af1b53f2
 
   any_hash:
     git: https://github.com/sija/any_hash.cr.git
