@@ -4,6 +4,12 @@ module Website
 
     def produce(request : Marten::HTTP::Request? = nil)
       version_data
+    rescue
+      {
+        "latest_version"       => "0.6.3",
+        "latest_version_date"  => "Mar 29, 2026",
+        "latest_major_version" => "0.6",
+      }
     end
 
     private def version_data : Hash(String, String)
