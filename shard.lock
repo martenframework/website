@@ -2,7 +2,7 @@ version: 2.0
 shards:
   ameba:
     git: https://github.com/crystal-ameba/ameba.git
-    version: 1.7.0-dev+git.commit.7b947901704fa6f192fd3bae023144f03204727e
+    version: 1.7.0-dev+git.commit.cdd58b34b0d8a9c785d67183a7a8f07541549e55
 
   any_hash:
     git: https://github.com/sija/any_hash.cr.git
@@ -30,7 +30,7 @@ shards:
 
   marten:
     git: https://github.com/martenframework/marten.git
-    version: 0.6.3
+    version: 0.6.4
 
   marten_raven_middleware:
     git: https://github.com/ellmetha/marten-raven-middleware.git
