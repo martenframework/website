@@ -11,16 +11,15 @@ const router = new DOMRouter(controllers);
 document.addEventListener('DOMContentLoaded', () => {
   // Initializes navbar-specific behaviours.
   const navBarWrapSelector = document.querySelector('#navbar-wrap');
-  const navBarSelector = document.querySelector('nav.navbar');
-  const navBarSticky = navBarSelector.offsetTop;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > navBarSticky) {
-      navBarWrapSelector.classList.add('sticky');
-    } else {
-      navBarWrapSelector.classList.remove('sticky');
-    }
-  });
+  function updateNavBarStickyState() {
+    // Treat negative scroll (Firefox overscroll) as "at top".
+    const atTop = window.scrollY <= 0;
+    navBarWrapSelector.classList.toggle('sticky', !atTop);
+  }
+
+  window.addEventListener('scroll', updateNavBarStickyState, { passive: true });
+  updateNavBarStickyState();
 
   // Initializes responsive-specific behaviours.
   const largeDevicesWidth = 1025;

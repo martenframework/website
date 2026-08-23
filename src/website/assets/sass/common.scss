@@ -25,16 +25,20 @@ a {
 }
 
 div#body-wrap {
+  position: relative;
+
   div#navbar-wrap {
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 0.5rem 0;
     width: 100%;
     background: transparent;
-    transition: 0.25s;
     z-index: 9999;
     @include transition(0.25s);
 
     &.sticky {
+      position: fixed;
       background: linear-gradient(-45deg, #904e95 0, $primary);
       box-shadow: 0 0 5px rgba(black,0.2)
     }
