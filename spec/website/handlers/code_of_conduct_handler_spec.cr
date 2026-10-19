@@ -3,7 +3,7 @@ require "./spec_helper"
 describe Website::CodeOfConductHandler do
   describe "#dispatch" do
     it "contains the expected content" do
-      request = Marten::HTTP::Request.new(::HTTP::Request.new(method: "GET", resource: "", headers: HTTP::Headers.new))
+      request = Marten::HTTP::Request.new(::HTTP::Request.new(method: "GET", resource: "/", headers: HTTP::Headers.new))
       handler = Website::CodeOfConductHandler.new(request)
 
       response = handler.dispatch

@@ -3,7 +3,7 @@ require "./spec_helper"
 describe Website::NewsListHandler do
   describe "#render_to_response" do
     it "returns the news page and page numbers when no page parameter is set" do
-      request = Marten::HTTP::Request.new(method: "GET", resource: "")
+      request = Marten::HTTP::Request.new(method: "GET", resource: "/")
       handler = Website::NewsListHandler.new(request)
 
       handler.render_to_response
