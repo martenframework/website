@@ -14,7 +14,7 @@ module Website
         latest_release_tag = parsed_body.as_a.first.as_h["tag_name"].to_s
         latest_release_date = Time
           .parse_rfc3339(parsed_body.as_a.first.as_h["published_at"].to_s)
-          .in(Time::Location.load("EST"))
+          .in(Time::Location.fixed("EST", -5 * 3600))
 
         latest_version = latest_release_tag.scan(/^v(\d\.\d\.+\d+)/).try(&.first.captures.first).not_nil!
         latest_version = latest_version[0..-3] if latest_version.ends_with?(".0")

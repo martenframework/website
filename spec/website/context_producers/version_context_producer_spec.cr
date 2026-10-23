@@ -30,7 +30,7 @@ describe Website::VersionContextProducer do
           "latest_version"      => "0.2.3",
           "latest_version_date" => (
             Time.parse_rfc3339("2022-10-24T23:44:21Z")
-              .in(Time::Location.load("EST"))
+              .in(Time::Location.fixed("EST", -5 * 3600))
               .to_s("%h %-d, %Y")
           ),
           "latest_major_version" => "0.2",
@@ -62,7 +62,7 @@ describe Website::VersionContextProducer do
           "latest_version"      => "0.2",
           "latest_version_date" => (
             Time.parse_rfc3339("2022-10-24T23:44:21Z")
-              .in(Time::Location.load("EST"))
+              .in(Time::Location.fixed("EST", -5 * 3600))
               .to_s("%h %-d, %Y")
           ),
           "latest_major_version" => "0.2",
