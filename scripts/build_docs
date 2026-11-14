@@ -11,7 +11,7 @@ crystal docs --output=docs/static/api/dev
 for version in 0.5.7 0.6.4 0.7.0
 do
   git checkout v$version
-  doc_version=$(echo $version | rev | cut -c3- | rev)
+  doc_version=${version%.*}
   crystal docs --output=docs/static/api/$doc_version --project-version=$doc_version
 done
 git checkout main
